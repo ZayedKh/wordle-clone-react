@@ -35,13 +35,20 @@ const useWordle = (solution) => {
     // if user presses enter, add the new guess
 
     const handleKeyUp = ({ key }) => {
+        if(key === 'Backspace'){
+            setCurrentGuess((prev) => {
+                return prev.slice(0,-1);
+            });
+            return;
+        }
+
         if(/^[A-Za-z]$/.test(key)){
             if(currentGuess.length < 5){
                 setCurrentGuess((prev) => {
                     return prev + key;
                 });
             }
-        }
+        } 
     }
 
     // using these in other components
