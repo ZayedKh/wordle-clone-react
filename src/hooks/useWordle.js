@@ -77,7 +77,7 @@ const useWordle = (solution) => {
             return prevTurn + 1;
         });
 
-        // set current guess back to null so that the user can guess again
+        // set current guess back to null so that the user can guess again 
         setCurrentGuess('');
     }
 
