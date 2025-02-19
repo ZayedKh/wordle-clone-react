@@ -60,12 +60,25 @@ const useWordle = (solution) => {
         // in this code, the current user guess is added to prev guess through new guesses
         // at index [turn]
         // the new guesses array is then returned
-        
+
         setGuesses((prevGuesses) => {
             let newGuesses = [...prevGuesses];
             newGuesses[turn] = formattedGuess;
             return newGuesses;
         });
+
+        // setter function to add current guess to guess history
+        setHistory((prevHistory) => {
+            return [...prevHistory, currentGuess];
+        });
+
+        // increase the turn state variable after each turn
+        setTurn((prevTurn) =>{
+            return prevTurn + 1;
+        });
+
+        // set current guess back to null so that the user can guess again
+        setCurrentGuess('');
     }
 
     // handle keyup event & track current guess
