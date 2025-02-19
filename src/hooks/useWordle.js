@@ -34,9 +34,9 @@ const useWordle = (solution) => {
     // handle keyup event & track current guess
     // if user presses enter, add the new guess
 
-    const handleKeyUp = () => {
+    const handleKeyUp = ({ key }) => {
+        console.log(key);
 
-        
     }
 
     // using these in other components
