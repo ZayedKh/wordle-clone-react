@@ -19,15 +19,36 @@ const useWordle = (solution) => {
 
     // format a guess into an array of letter objects
     // e.g {key: 'a', color: yellow}
-
     const formatGuess = () => {
-        console.log(`Formatting guess - ${currentGuess}`);
+        // spreading solution (string) turning into array of chars
+        let solutionArray = [...solution];
+
+        // array of objects represented each letter
+        let formattedGuess = [...currentGuess].map((c) => {
+            return {key: length, color: 'grey'};
+        });
+
+        // find any green letters
+        formattedGuess.forEach((c, i) => {
+            if(solutionArray[i] === c.key){
+                formattedGuess[i].color === 'green';
+                solutionArray[i] = null;
+            }
+        });
+
+
+        // find any yellow letters
+        formatGuess.forEach((c, i) => {
+            if(solutionArray.includes(c.key) && c.color !== 'green'){
+                formatGuess[i].color = 'yellow';
+                solutionArray[i] = null;
+            }
+        });
     }
 
     // add a new guess to the guesses state
     // update the isCorrect state if the guess is correct
     // add one to the turn state
-
     const addNewGuess = () => {
 
 
