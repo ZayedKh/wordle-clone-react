@@ -11,11 +11,14 @@ function App() {
       .then(res => res.json())
       .then(json => {
         console.log(json);
+        const randomSolution = json[Math.floor(Math.random() * 50)];
+        // console.log(randomSolution);
+        setSolution(randomSolution);
       })
       .catch(error => {
         console.error("Error:", error);
       });
-  }, []);
+  }, [setSolution]);
 
 
   return (
