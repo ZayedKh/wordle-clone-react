@@ -1,13 +1,25 @@
 import React from 'react'
 
-export default function Row(guess){
-    return(
+export default function Row({ guess }) {
+
+
+    if(guess){
+        return(
+            <div className='row past'>
+                {guess.map((c, i) =>(
+                    <div key={i} className={c.color}>{c.key}</div>    
+                ))}
+            </div>
+        )
+    }
+
+    return (
         <div className='row'>
-            <div>{guess[0]}</div>
-            <div>{guess[0]}</div>
-            <div>{guess[0]}</div>
-            <div>{guess[0]}</div>
-            <div>{guess[0]}</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     )
 }
