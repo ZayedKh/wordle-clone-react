@@ -9,7 +9,7 @@ const useWordle = (solution) => {
     const [currentGuess, setCurrentGuess] = useState('');
 
     // array to track guesses user has submitted, these guesses will be formatted guesses
-    const [guesses, setGuesses] = useState([]);
+    const [guesses, setGuesses] = useState([...Array(6)]);
 
     // array to track past guesses, however the guesses in this array are going to be strings
     const [history, setHistory] = useState([]);
@@ -51,9 +51,21 @@ const useWordle = (solution) => {
     // add a new guess to the guesses state
     // update the isCorrect state if the guess is correct
     // add one to the turn state
-    const addNewGuess = () => {
+    const addNewGuess = (formattedGuess) => {
+        if(currentGuess === solution){
+            setIsCorrect(true);
+        }
+        
 
-
+        // in this code, the current user guess is added to prev guess through new guesses
+        // at index [turn]
+        // the new guesses array is then returned
+        
+        setGuesses((prevGuesses) => {
+            let newGuesses = [...prevGuesses];
+            newGuesses[turn] = formattedGuess;
+            return newGuesses;
+        });
     }
 
     // handle keyup event & track current guess
@@ -78,7 +90,7 @@ const useWordle = (solution) => {
             }
 
             const formatted = formatGuess();
-            console.log(formatted);
+            addNewGuess(formatted);
         }
 
         if(key === 'Backspace'){
