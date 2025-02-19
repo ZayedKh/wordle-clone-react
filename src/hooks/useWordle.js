@@ -21,7 +21,7 @@ const useWordle = (solution) => {
     // e.g {key: 'a', color: yellow}
 
     const formatGuess = () => {
-
+        console.log(`Formatting guess - ${currentGuess}`);
     }
 
     // add a new guess to the guesses state
@@ -29,12 +29,34 @@ const useWordle = (solution) => {
     // add one to the turn state
 
     const addNewGuess = () => {
+
+
     }
 
     // handle keyup event & track current guess
     // if user presses enter, add the new guess
 
     const handleKeyUp = ({ key }) => {
+        if(key === 'Enter'){
+            // only add guess if turn is < 5
+            if(turn > 5){
+                console.log("You have used all your guesses");
+                return;
+            }
+            // no duplicates
+            if(history.includes(currentGuess)){
+                console.log("You cannot have duplicate guesses");
+                return;
+            }
+            // word should have length of 5
+            if(currentGuess.length !== 5){
+                console.log("You're guess must be 5 chars long");
+                return;
+            }
+
+            formatGuess();
+        }
+
         if(key === 'Backspace'){
             setCurrentGuess((prev) => {
                 return prev.slice(0,-1);
