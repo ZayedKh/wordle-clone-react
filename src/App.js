@@ -3,17 +3,18 @@ import './App.css'
 
 function App() {
 
-
+  // useState to set state variable 'solution'
   const [solution, setSolution] = useState(null);
-  useEffect(() => {
 
+  // useEffect hook to set solution, renders only when setSolution mounts/modified
+  useEffect(() => {
+    // fetch request to api endpoint
     fetch('http://localhost:3001/solutions')
-      .then(res => res.json())
+      .then(res => res.json()) // convert result to json format
       .then(json => {
-        console.log(json);
         const randomSolution = json[Math.floor(Math.random() * 50)];
-        // console.log(randomSolution);
-        setSolution(randomSolution);
+        // console.log(randomSolution); 
+        setSolution(randomSolution.word);
       })
       .catch(error => {
         console.error("Error:", error);
@@ -24,6 +25,14 @@ function App() {
   return (
     <div className="App">
       <h1>Wordle (Lingo)</h1>
+      {
+      /*
+       We use ampersand operator so that we don't output a null solution
+       Solution has to be valid in order to output anything
+      */
+      }
+
+      {solution && <div>Solution is: {solution}</div>}
     </div>
   );
 }
