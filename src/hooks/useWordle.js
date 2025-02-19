@@ -25,25 +25,27 @@ const useWordle = (solution) => {
 
         // array of objects represented each letter
         let formattedGuess = [...currentGuess].map((c) => {
-            return {key: length, color: 'grey'};
+            return {key: c, color: 'grey'};
         });
 
         // find any green letters
         formattedGuess.forEach((c, i) => {
             if(solutionArray[i] === c.key){
-                formattedGuess[i].color === 'green';
+                formattedGuess[i].color = 'green';
                 solutionArray[i] = null;
             }
         });
 
 
         // find any yellow letters
-        formatGuess.forEach((c, i) => {
+        formattedGuess.forEach((c, i) => {
             if(solutionArray.includes(c.key) && c.color !== 'green'){
-                formatGuess[i].color = 'yellow';
-                solutionArray[i] = null;
+                formattedGuess[i].color = 'yellow';
+                solutionArray[solutionArray.indexOf(c.key)] = null;
             }
         });
+
+        return formattedGuess;
     }
 
     // add a new guess to the guesses state
@@ -75,7 +77,8 @@ const useWordle = (solution) => {
                 return;
             }
 
-            formatGuess();
+            const formatted = formatGuess();
+            console.log(formatted);
         }
 
         if(key === 'Backspace'){
