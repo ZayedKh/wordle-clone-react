@@ -23,7 +23,7 @@ const useWordle = (solution) => {
         // spreading solution (string) turning into array of chars
         let solutionArray = [...solution];
 
-        // array of objects represented each letter
+        // array of objects represents each letter
         let formattedGuess = [...currentGuess].map((c) => {
             return {key: c, color: 'grey'};
         });
@@ -57,7 +57,7 @@ const useWordle = (solution) => {
         }
         
 
-        // in this code, the current user guess is added to prev guess through new guesses
+        // in this code, the current user guess is added to prev guesses through new guesses
         // at index [turn]
         // the new guesses array is then returned
 
