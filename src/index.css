@@ -82,6 +82,21 @@
   background-color: #8f8f8f;
 }
 
+.keypad > div.green{
+  background-color: #5ac85a;
+  border-color: #5ac85a;
+}
+
+.keypad > div.yellow {
+  background-color: #e2cc68;
+  border-color: #e2cc68;
+}
+
+.keypad > div.grey{
+  background-color: #a1a1a1;
+  border-color: #a1a1a1;
+}
+
 /* animations */
 
 @keyframes flip {
