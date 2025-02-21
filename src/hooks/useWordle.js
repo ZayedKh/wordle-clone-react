@@ -101,7 +101,7 @@ const useWordle = (solution) => {
                     return;
                 }
 
-                if(l.color === 'green' && l.color !== 'green' && l.color !== 'yellow'){
+                if(l.color === 'grey' && l.color !== 'green' && l.color !== 'yellow'){
                     newKeys[l.key] = 'grey';
                     return;
                 }

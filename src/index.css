@@ -79,7 +79,9 @@
   border-radius: 2px;
   line-height: 50px;
   font-weight: bold;
-  background-color: #8f8f8f;
+  background-color: #575757;
+  border: 1px solid white;
+  cursor: pointer;
 }
 
 .keypad > div.green{
@@ -94,7 +96,7 @@
 
 .keypad > div.grey{
   background-color: #a1a1a1;
-  border-color: #a1a1a1;
+  border-color: #000;
 }
 
 /* animations */
