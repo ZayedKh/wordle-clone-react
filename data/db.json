@@ -1,57 +1,237 @@
 {
+    "letters": [
+      {"key": "a"},
+      {"key": "b"},
+      {"key": "c"},
+      {"key": "d"},
+      {"key": "e"},
+      {"key": "f"},
+      {"key": "g"},
+      {"key": "h"},
+      {"key": "i"},
+      {"key": "j"},
+      {"key": "k"},
+      {"key": "l"},
+      {"key": "m"},
+      {"key": "n"},
+      {"key": "o"},
+      {"key": "p"},
+      {"key": "q"},
+      {"key": "r"},
+      {"key": "s"},
+      {"key": "t"},
+      {"key": "u"},
+      {"key": "v"},
+      {"key": "w"},
+      {"key": "x"},
+      {"key": "y"},
+      {"key": "z"}
+    ],
 
     "solutions": [
-        {"word": "ninja", "id": 1},
-        {"word": "apple", "id": 1},
-        {"word": "brave", "id": 2},
-        {"word": "charm", "id": 3},
-        {"word": "dizzy", "id": 4},
-        {"word": "eagle", "id": 5},
-        {"word": "frost", "id": 6},
-        {"word": "glide", "id": 7},
-        {"word": "happy", "id": 8},
-        {"word": "ideal", "id": 9},
-        {"word": "joker", "id": 10},
-        {"word": "knock", "id": 11},
-        {"word": "lucky", "id": 12},
-        {"word": "magic", "id": 13},
-        {"word": "noble", "id": 14},
-        {"word": "ocean", "id": 15},
-        {"word": "peace", "id": 16},
-        {"word": "quilt", "id": 17},
-        {"word": "risky", "id": 18},
-        {"word": "silly", "id": 19},
-        {"word": "tiger", "id": 20},
-        {"word": "unity", "id": 21},
-        {"word": "vivid", "id": 22},
-        {"word": "witty", "id": 23},
-        {"word": "xenon", "id": 24},
-        {"word": "young", "id": 25},
-        {"word": "zebra", "id": 26},
-        {"word": "acorn", "id": 27},
-        {"word": "blend", "id": 28},
-        {"word": "crisp", "id": 29},
-        {"word": "dwell", "id": 30},
-        {"word": "event", "id": 31},
-        {"word": "flame", "id": 32},
-        {"word": "grasp", "id": 33},
-        {"word": "honey", "id": 34},
-        {"word": "inbox", "id": 35},
-        {"word": "jazzy", "id": 36},
-        {"word": "kites", "id": 37},
-        {"word": "lemon", "id": 38},
-        {"word": "mirth", "id": 39},
-        {"word": "ninja", "id": 40},
-        {"word": "orbit", "id": 41},
-        {"word": "prism", "id": 42},
-        {"word": "quirk", "id": 43},
-        {"word": "robin", "id": 44},
-        {"word": "swirl", "id": 45},
-        {"word": "toast", "id": 46},
-        {"word": "upset", "id": 47},
-        {"word": "vexed", "id": 48},
-        {"word": "whale", "id": 49},
-        {"word": "zesty", "id": 50}
-    ]
-
+    {
+        "word": "ninja",
+        "id": 1
+    },
+    {
+        "word": "apple",
+        "id": 1
+    },
+    {
+        "word": "brave",
+        "id": 2
+    },
+    {
+        "word": "charm",
+        "id": 3
+    },
+    {
+        "word": "dizzy",
+        "id": 4
+    },
+    {
+        "word": "eagle",
+        "id": 5
+    },
+    {
+        "word": "frost",
+        "id": 6
+    },
+    {
+        "word": "glide",
+        "id": 7
+    },
+    {
+        "word": "happy",
+        "id": 8
+    },
+    {
+        "word": "ideal",
+        "id": 9
+    },
+    {
+        "word": "joker",
+        "id": 10
+    },
+    {
+        "word": "knock",
+        "id": 11
+    },
+    {
+        "word": "lucky",
+        "id": 12
+    },
+    {
+        "word": "magic",
+        "id": 13
+    },
+    {
+        "word": "noble",
+        "id": 14
+    },
+    {
+        "word": "ocean",
+        "id": 15
+    },
+    {
+        "word": "peace",
+        "id": 16
+    },
+    {
+        "word": "quilt",
+        "id": 17
+    },
+    {
+        "word": "risky",
+        "id": 18
+    },
+    {
+        "word": "silly",
+        "id": 19
+    },
+    {
+        "word": "tiger",
+        "id": 20
+    },
+    {
+        "word": "unity",
+        "id": 21
+    },
+    {
+        "word": "vivid",
+        "id": 22
+    },
+    {
+        "word": "witty",
+        "id": 23
+    },
+    {
+        "word": "xenon",
+        "id": 24
+    },
+    {
+        "word": "young",
+        "id": 25
+    },
+    {
+        "word": "zebra",
+        "id": 26
+    },
+    {
+        "word": "acorn",
+        "id": 27
+    },
+    {
+        "word": "blend",
+        "id": 28
+    },
+    {
+        "word": "crisp",
+        "id": 29
+    },
+    {
+        "word": "dwell",
+        "id": 30
+    },
+    {
+        "word": "event",
+        "id": 31
+    },
+    {
+        "word": "flame",
+        "id": 32
+    },
+    {
+        "word": "grasp",
+        "id": 33
+    },
+    {
+        "word": "honey",
+        "id": 34
+    },
+    {
+        "word": "inbox",
+        "id": 35
+    },
+    {
+        "word": "jazzy",
+        "id": 36
+    },
+    {
+        "word": "kites",
+        "id": 37
+    },
+    {
+        "word": "lemon",
+        "id": 38
+    },
+    {
+        "word": "mirth",
+        "id": 39
+    },
+    {
+        "word": "ninja",
+        "id": 40
+    },
+    {
+        "word": "orbit",
+        "id": 41
+    },
+    {
+        "word": "prism",
+        "id": 42
+    },
+    {
+        "word": "quirk",
+        "id": 43
+    },
+    {
+        "word": "robin",
+        "id": 44
+    },
+    {
+        "word": "swirl",
+        "id": 45
+    },
+    {
+        "word": "toast",
+        "id": 46
+    },
+    {
+        "word": "upset",
+        "id": 47
+    },
+    {
+        "word": "vexed",
+        "id": 48
+    },
+    {
+        "word": "whale",
+        "id": 49
+    },
+    {
+        "word": "zesty",
+        "id": 50
+    }
+]
 }
