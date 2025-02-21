@@ -17,6 +17,9 @@ const useWordle = (solution) => {
     // boolean to check if current guess is correct - when user wins game
     const [isCorrect, setIsCorrect] = useState(false);
 
+    // object to keep track of what keys we have used {a: 'green', b: 'yello'}
+    const [usedKeys, setUsedKeys] = useState({});
+
     // format a guess into an array of letter objects
     // e.g {key: 'a', color: yellow}
     const formatGuess = () => {
@@ -75,6 +78,36 @@ const useWordle = (solution) => {
         // increase the turn state variable after each turn
         setTurn((prevTurn) =>{
             return prevTurn + 1;
+        });
+
+        // setter function takes in usedKeys previous state and clones it into newKeys
+        // we then iterate through all letters in formatted guess object
+        // if the letter exists in newKeys (prevUsedKeys), we set the current color to that letters color
+        // otherwise currentColor remains null
+        //
+        setUsedKeys((prevUsedKeys) => {
+            let newKeys = {...prevUsedKeys};
+             formattedGuess.forEach((l) => {
+                const currentColor = newKeys[l.key];
+
+                if(l.color === 'green'){
+                    newKeys[l.key] = 'green';
+                    return;
+                }
+
+                // if we have found the letter before and set it to green, we don't want to set it to yellow
+                if(l.color === 'yellow' && currentColor !== 'green'){
+                    newKeys[l.key] = 'yellow';
+                    return;
+                }
+
+                if(l.color === 'green' && l.color !== 'green' && l.color !== 'yellow'){
+                    newKeys[l.key] = 'grey';
+                    return;
+                }
+             });
+
+             return newKeys;
         });
 
         // set current guess back to null so that the user can guess again 
